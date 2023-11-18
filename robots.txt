@@ -1,4 +1,4 @@
 User-agent: *
 Disallow:
 
-Sitemap: Effygal.github.io/sitemap.xml
+Sitemap: Effygal.github.io/docs/sitemap.xml
