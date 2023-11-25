@@ -1,7 +1,7 @@
 ---
 layout: page
-title: project 1
-description: a project with a background image
+title: Cache Modeling & Performance Prediction 
+description: Present novel mathematical models for accurately computing the hit rate curve of LRU, FIFO, and CLOCK replacement policies. Demonstrated the inaccuracy of the widely used Independent Reference Model (IRM) in cache modeling literature.
 img: assets/img/12.jpg
 importance: 1
 category: work
