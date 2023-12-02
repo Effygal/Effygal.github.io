@@ -1,4 +1,0 @@
-User-agent: *
-Disallow:
-
-Sitemap: https://Effygal.github.io/sitemap.xml
