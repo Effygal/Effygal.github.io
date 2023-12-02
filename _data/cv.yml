@@ -2,64 +2,61 @@
   type: map
   contents:
     - name: Full Name
-      value: Albert Einstein
-    - name: Date of Birth
-      value: 14th March 1879
+      value: Effy Wang
+    # - name: Date of Birth
+    #   value: 4th January 1990
     - name: Languages
-      value: English, German
+      value: English, Mandarin
 
 - title: Education
   type: time_table
   contents:
-    - title: PhD
-      institution: University of Zurich, Zurich, Switzerland
-      year: 1905
+    - title: PhD student in Computer Science
+      institution: Northeastern University, Boston, MA, USA
+      year: 2021 - now
       description:
-        - Description 1.
-        - Description 2.
-        - title: Description 3.
-          contents:
-            - Sub-description 1.
-            - Sub-description 2.
-    - title: Federal teaching diploma
-      institution: Eidgenössische Technische Hochschule, Zurich, Switzerland
-      year: 1900
+        - Advisor: Prof.Peter Desnoyers.
+        - Lab: Solid State Storage lab.
+        - Research: File systems, Distributed Storage systems, Operating systems.
+          # contents:
+          #   - Sub-description 1.
+          #   - Sub-description 2.
+    - title: Master of Science
+      institution: University of Southampton, UK
+      year: 2014
       description:
-        - Description 1.
-        - Description 2.
+        - Graduated with Merit.
+        - Distinction in Dissertation.
 
 - title: Experience
   type: time_table
   contents:
-    - title: Professor of Theoretical Physics
-      institution: Institute for Advanced Study, Princeton University
-      year: 1933 - 1955
+    - title: Research Assistant
+      institution: Khoury Collage of Computer Science, Northeastern University
+      year: 2021 - Present
       description:
-        - Description 1.
-        - Description 2.
-        - title: Description 3.
-          contents:
-            - Sub-description 1.
-            - Sub-description 2.
-    - title: Visiting Professor
-      institution: California Institute of Technology, Pasadena, California, US
-      year: 1933
+        - Conducting research on mathematical cache modelling. The associated paper is currently under submission.
+        - Collaborating on the design and implementation of distributed storage systems under the cooperative projects between NEU and BU (MOC projects).
+        - Cache Modeling / Trace-driven Simulations / Data Profiling / File Systems / VMs / Object Storage
+        # - title: Description 3.
+        #   contents:
+        #     - Sub-description 1.
+        #     - Sub-description 2.
+    - title: Teaching Assistant
+      institution: Khoury Collage of Computer Science, Northeastern University
+      year: 2023 Spring & 2023 Fall 
       description:
-        - Description 1.
-        - Description 2.
+        - TA for CS 5600 Computer Systems graduate-level OS class.
+        - Providing tutorials on low-level system programming, debugging with GDB, and basics of the Linux kernel.
+        - Linux / Operating Systems / System Programming
 
-    - title: Director
-      institution: Kaiser Wilhelm Institute for Physics, Berlin, Germany.
-      year: 1917-1933
-
-    - title: Professor of Theoretical Physics
-      institution: Karl-Ferdinand University, Prague, Czechoslovakia
-      year: 1911 - 1917
+    - title: System Administration
+      institution: Yunnan University, China.
+      year: 2014 - 2021
       description:
-
-    - title: Associate Professor of Theoretical Physics
-      institution: University of Zurich, Zurich, Switzerland
-      year: 1909 - 1911
+        - Maintaining the Linux servers of the university.
+        - Providing technical support for the Linux users.
+        - Linux / System Administration / Shell Scripting / Virtualization / Storage / Networking
 
 - title: Open Source Projects
   type: time_table
@@ -68,30 +65,31 @@
       year: 2015-now
       description: A beautiful, simple, clean, and responsive Jekyll theme for academics.
 
-- title: Honors and Awards
-  type: time_table
-  contents:
-    - year: 1921
-      items: 
-        - Nobel Prize in Physics 
-        - Matteucci Medal
-    - year: 2029
-      items: 
-        - Max Planck Medal
+# - title: Honors and Awards
+#   type: time_table
+#   contents:
+#     - year: 1921
+#       items: 
+#         - Nobel Prize in Physics 
+#         - Matteucci Medal
+#     - year: 2029
+#       items: 
+#         - Max Planck Medal
 
 - title: Academic Interests
   type: nested_list
   contents:
-    - title: Topic 1.
+    - title: Computer Systems.
       items: 
-        - Description 1.
-        - Description 2.
-    - title: Topic 2.
+        - Distributed Storage.
+        - System Simulation & Modeling.
+        - Data Profiling.
+    - title: Computer Architecture.
       items:
-        - Description 1.
-        - Description 2.
+        - Tiered-memory.
+        - CXL-enabled systems.
 
-- title: Other Interests
-  type: list
-  contents:
-    - <u>Hobbies:</u> Hobby 1, Hobby 2, etc.
+# - title: Other Interests
+#   type: list
+#   contents:
+#     - <u>Hobbies:</u> Hobby 1, Hobby 2, etc.
