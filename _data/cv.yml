@@ -15,9 +15,9 @@
       institution: Northeastern University, Boston, MA, USA
       year: 2021 - now
       description:
-        - Advisor: Prof.Peter Desnoyers.
-        - Lab: Solid State Storage lab.
-        - Research: File systems, Distributed Storage systems, Operating systems.
+        - Advisor:Prof.Peter Desnoyers.
+        - Lab:Solid State Storage lab.
+        - Research Field:File systems, Distributed Storage systems, Operating systems.
           # contents:
           #   - Sub-description 1.
           #   - Sub-description 2.
@@ -44,7 +44,7 @@
         #     - Sub-description 2.
     - title: Teaching Assistant
       institution: Khoury Collage of Computer Science, Northeastern University
-      year: 2023 Spring & 2023 Fall 
+      year: 2023
       description:
         - TA for CS 5600 Computer Systems graduate-level OS class.
         - Providing tutorials on low-level system programming, debugging with GDB, and basics of the Linux kernel.
