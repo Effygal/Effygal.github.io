@@ -54,8 +54,8 @@
       institution: Yunnan University, China.
       year: 2014 - 2021
       description:
-        - Maintaining the Linux servers of the university.
-        - Providing technical support for the Linux users.
+        - Maintaining the servers of the university.
+        - Providing technical support for the users.
         - Linux / System Administration / Shell Scripting / Virtualization / Storage / Networking
 
 - title: Open Source Projects
@@ -81,12 +81,12 @@
   contents:
     - title: Computer Systems.
       items: 
-        - Distributed Storage.
-        - System Simulation & Modeling.
-        - Data Profiling.
+        - Simulation & Analytical Modeling.
+        - QoS in Storage Systems.
+        - Systems for Machine Learning.
     - title: Computer Architecture.
       items:
-        - Tiered-memory.
+        - Emulation.
         - CXL-enabled systems.
 
 # - title: Other Interests
