@@ -12,7 +12,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Cache Modeling &amp; Performance Prediction | Yirong Effy Wang</title>
     <meta name="author" content="Yirong Effy Wang">
-    <meta name="description" content="Present novel mathematical models for accurately computing the hit rate curve of LRU, FIFO, and CLOCK replacement policies. Demonstrated the inaccuracy of the widely used Independent Reference Model (IRM) in cache modeling literature.">
+    <meta name="description" content="We extend Che’s approximation to analyze CLOCK cache performance under both request models and address three key properties: (1) IRM always yields well-behaved, convex LRU miss ratio curves; (2) with a fixed inter-arrival time distribution, FIFO performs worse when item popularity is skewed; conversely, (3) CLOCK performs better when item popularity is skewed. We present formal proofs for these properties.">
     <meta name="keywords" content="Computer Systems, Distributed Storage, Cache Modelling">
 
 
@@ -26,7 +26,7 @@
     <!-- Fonts & Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" integrity="sha256-HtsXJanqjKTc8vVQjO4YMhiqFoXkfBsjBWcX91T1jr8=" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/academicons@1.9.1/css/academicons.min.css" integrity="sha256-i1+4qU2G2860dGGIOJscdC30s9beBXjFfzjWLjBRsBg=" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:100,300,400,500,700|Material+Icons">
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700%7CRoboto+Slab:100,300,400,500,700%7CMaterial+Icons">
 
     <!-- Code Syntax Highlighting -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jwarby/jekyll-pygments-themes@master/github.css" media="" id="highlight_theme_light">
@@ -38,7 +38,7 @@
     <link rel="shortcut icon" href="data:image/svg+xml,&lt;svg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20100%20100%22&gt;&lt;text%20y=%22.9em%22%20font-size=%2290%22&gt;%E2%9A%9B%EF%B8%8F&lt;/text&gt;&lt;/svg&gt;">
     
     <link rel="stylesheet" href="/assets/css/main.css">
-    <link rel="canonical" href="http://localhost:4000/projects/1_project/">
+    <link rel="canonical" href="http://localhost:8080/projects/1_project/">
 
     <!-- Dark Mode -->
     
@@ -117,11 +117,17 @@
 
           <header class="post-header">
             <h1 class="post-title">Cache Modeling &amp; Performance Prediction</h1>
-            <p class="post-description">Present novel mathematical models for accurately computing the hit rate curve of LRU, FIFO, and CLOCK replacement policies. Demonstrated the inaccuracy of the widely used Independent Reference Model (IRM) in cache modeling literature.</p>
+            <p class="post-description">We extend Che’s approximation to analyze CLOCK cache performance under both request models and address three key properties: (1) IRM always yields well-behaved, convex LRU miss ratio curves; (2) with a fixed inter-arrival time distribution, FIFO performs worse when item popularity is skewed; conversely, (3) CLOCK performs better when item popularity is skewed. We present formal proofs for these properties.</p>
           </header>
 
           <article>
-            
+            <h2 id="abstract">Abstract</h2>
+<p>Consider two request streams that share the same inter-arrival time distribution: (a) an Independent Reference Model (IRM) traffic, where requests are selected i.i.d. from a skewed (e.g., Zipf-like) item frequency distribution. By construction, the inter-arrival times of such traffic naturally form a hyperexponential distribution. (b) A hyperexponential renewal traffic, constructed by re-sampling the inter-arrival times from the same IAT distribution of the IRM traffic, but assigning items uniformly.
+We extend Che’s approximation to analyze CLOCK cache performance under both request models and address three key properties: (1) IRM always yields well-behaved, convex LRU miss ratio curves; (2) with a fixed inter-arrival time distribution, FIFO performs worse when item popularity is skewed; conversely, (3) CLOCK performs better when item popularity is skewed. We present formal proofs for these properties.</p>
+
+<p>These results explain why CLOCK outperforms LRU on certain workloads and why FIFO outperforms RANDOM in real workloads. More importantly, they suggest that neither IRM alone nor renewal models alone are sufficient to model non-LRU/non-LFU cache performance. Both skewness in item popularity (frequency) and the IAT distribution are essential.</p>
+
+<p>We propose a practical two-dimensional analytical model for real workload analysis, combining frequency- based workload decomposition with recency-based modeling for each substream. We demonstrate that this approach accurately predicts FIFO and CLOCK cache performance for real-world workloads from the CloudPhysics corpus.</p>
 
           </article>
 
@@ -133,7 +139,7 @@
     <!-- Footer -->    
     <footer class="fixed-bottom">
       <div class="container mt-0">
-        © Copyright 2024 Yirong Effy Wang. Powered by <a href="https://jekyllrb.com/" target="_blank" rel="external nofollow noopener">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio" rel="external nofollow noopener" target="_blank">al-folio</a> theme. Hosted by <a href="https://pages.github.com/" target="_blank" rel="external nofollow noopener">GitHub Pages</a>. Photos from <a href="https://unsplash.com" target="_blank" rel="external nofollow noopener">Unsplash</a>.
+        © Copyright 2025 Yirong Effy Wang. Powered by <a href="https://jekyllrb.com/" target="_blank" rel="external nofollow noopener">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio" rel="external nofollow noopener" target="_blank">al-folio</a> theme. Hosted by <a href="https://pages.github.com/" target="_blank" rel="external nofollow noopener">GitHub Pages</a>. Photos from <a href="https://unsplash.com" target="_blank" rel="external nofollow noopener">Unsplash</a>.
 
       </div>
     </footer>
