@@ -1,8 +1,8 @@
-- title: General Information
+- title: Information
   type: map
   contents:
     - name: Full Name
-      value: Effy Wang
+      value: Yirong (Effy) Wang
     # - name: Date of Birth
     #   value: 4th January 1990
     - name: Languages
@@ -13,57 +13,58 @@
   contents:
     - title: PhD student in Computer Science
       institution: Northeastern University, Boston, MA, USA
-      year: 2021 - now
+      # year: 2021 - now
       description:
         - Advisor:Prof.Peter Desnoyers.
-        - Lab:Solid State Storage lab.
-        - Research Field:File systems, Distributed Storage systems, Operating systems.
+        - Lab:Systems and Storage Lab, NEU Systems Research Group.
+        - Research Field:Cache Modeling, Workload Synthesis, QoS Modeling.
           # contents:
           #   - Sub-description 1.
           #   - Sub-description 2.
     - title: Master of Science
       institution: University of Southampton, UK
-      year: 2014
+      # year: 2012 - 2014
       description:
-        - Graduated with Merit.
-        - Distinction in Dissertation.
+        - Graduate with Merit.
+        - Distinction in Thesis.
+
+    - title: Bachelor of Engineering
+      institution: Tianjin Polytechnic University, China
+      # year: 2008 - 2012
+      description:
+        - GPA 82/100.
 
 - title: Experience
   type: time_table
   contents:
     - title: Research Assistant
       institution: Khoury Collage of Computer Science, Northeastern University
-      year: 2021 - Present
+      # year: 2021 - Present
       description:
-        - Conducting research on mathematical cache modelling. The associated paper is currently under submission.
-        - Collaborating on the design and implementation of distributed storage systems under the cooperative projects between NEU and BU (MOC projects).
-        - Cache Modeling / Trace-driven Simulations / Data Profiling / File Systems / VMs / Object Storage
+        - Research in cache modeling; study properties of different cache policies under varying workload assumptions.
+        - Design high-fidelity workload synthesis methods for various storage benchmarking applications.
+        - Collaborate with the VMware vSAN team to develop QoS modeling for fair resource allocation and performance isolation.
+        - Cache Modeling / Trace-driven Simulations / Storage Benchmarking / File Systems / VMs / Object Storage
         # - title: Description 3.
         #   contents:
         #     - Sub-description 1.
         #     - Sub-description 2.
     - title: Teaching Assistant
       institution: Khoury Collage of Computer Science, Northeastern University
-      year: 2023
+      # year: 2022 - 2023
       description:
-        - TA for CS 5600 Computer Systems graduate-level OS class.
-        - Providing tutorials on low-level system programming, debugging with GDB, and basics of the Linux kernel.
+        - TA for CS 5600 Computer Systems (3 semesters).
+        - Providing tutorials on system programming, debugging with GDB, and fundamentals of operating systems.
         - Linux / Operating Systems / System Programming
 
     - title: System Administration
       institution: Yunnan University, China.
-      year: 2014 - 2021
+      # year: 2014 - 2021
       description:
-        - Maintaining the servers of the university.
-        - Providing technical support for the users.
-        - Linux / System Administration / Shell Scripting / Virtualization / Storage / Networking
-
-- title: Open Source Projects
-  type: time_table
-  contents:
-    - title: <a href="https://github.com/alshedivat/al-folio">al-folio</a>
-      year: 2015-now
-      description: A beautiful, simple, clean, and responsive Jekyll theme for academics.
+        - Administrate user accounts, deploy software and maintain data backup/recovery processes.
+        - Manage university network infrastructure, servers, and security systems.
+        - Develop and document IT policies, monitor system performance, and resolve technical issues.
+        - Sysadmin / Operating Systems / Linux
 
 # - title: Honors and Awards
 #   type: time_table
@@ -76,18 +77,16 @@
 #       items: 
 #         - Max Planck Medal
 
-- title: Academic Interests
+- title: Research Interests
   type: nested_list
   contents:
     - title: Computer Systems.
       items: 
+        - Caching.
         - Simulation & Analytical Modeling.
-        - QoS in Storage Systems.
-        - Systems for Machine Learning.
     - title: Computer Architecture.
       items:
         - Emulation.
-        - CXL-enabled systems.
 
 # - title: Other Interests
 #   type: list
