@@ -5,7 +5,7 @@ inline: true
 related_posts: false
 ---
 
-I'll be chairing the [New England Systems Day 2025](https://khoury-srg.github.io/nesd25/) conference in Boston. 
+I'll be attending the [New England Systems Day 2025](https://khoury-srg.github.io/nesd25/) conference in Boston. 
 
 ---
 Last year, I gave a talk on high-fidelity trace synthesis for storage benchmarking.

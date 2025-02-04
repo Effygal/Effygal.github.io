@@ -10,9 +10,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Frequency and Recency Both Matter: How FIFO and CLOCK Performance Respond to Popularity Skewness | Yirong Effy Wang</title>
+    <title>Dynamic Hierarchical Throttling for vSAN | Yirong Effy Wang</title>
     <meta name="author" content="Yirong Effy Wang">
-    <meta name="description" content="We extend Che’s approximation to analyze CLOCK cache performance under both IRM and Hyperexponential Renewal request models and address three key properties: (1) IRM always yields well-behaved, convex LRU miss ratio curves; (2) with a fixed inter-arrival time distribution, FIFO performs worse when item popularity is skewed; conversely, (3) CLOCK performs better when item popularity is skewed. We present formal proofs for these properties.">
+    <meta name="description" content="This project focuses on resource allocation in VMware vSAN using a dynamic linear programming model to optimize traffic across virtual and physical resources while adhering to SLA constraints. Instead of relying on a centralized controller, it leverages VM hypervisor capabilities to reduce queue delays. The approach also implements multi-hierarchical token control to enhance performance and fairness.">
     <meta name="keywords" content="Computer Systems, Distributed Storage, Cache Modelling">
 
 
@@ -38,7 +38,7 @@
     <link rel="shortcut icon" href="data:image/svg+xml,&lt;svg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20100%20100%22&gt;&lt;text%20y=%22.9em%22%20font-size=%2290%22&gt;%E2%9A%9B%EF%B8%8F&lt;/text&gt;&lt;/svg&gt;">
     
     <link rel="stylesheet" href="/assets/css/main.css">
-    <link rel="canonical" href="http://localhost:4000/projects/1_project/">
+    <link rel="canonical" href="http://localhost:4000/projects/3_project/">
 
     <!-- Dark Mode -->
     
@@ -116,18 +116,13 @@
         <div class="post">
 
           <header class="post-header">
-            <h1 class="post-title">Frequency and Recency Both Matter: How FIFO and CLOCK Performance Respond to Popularity Skewness</h1>
-            <p class="post-description">We extend Che’s approximation to analyze CLOCK cache performance under both IRM and Hyperexponential Renewal request models and address three key properties: (1) IRM always yields well-behaved, convex LRU miss ratio curves; (2) with a fixed inter-arrival time distribution, FIFO performs worse when item popularity is skewed; conversely, (3) CLOCK performs better when item popularity is skewed. We present formal proofs for these properties.</p>
+            <h1 class="post-title">Dynamic Hierarchical Throttling for vSAN</h1>
+            <p class="post-description">This project focuses on resource allocation in VMware vSAN using a dynamic linear programming model to optimize traffic across virtual and physical resources while adhering to SLA constraints. Instead of relying on a centralized controller, it leverages VM hypervisor capabilities to reduce queue delays. The approach also implements multi-hierarchical token control to enhance performance and fairness.</p>
           </header>
 
           <article>
             <h2 id="abstract">Abstract</h2>
-<p>Consider two request streams that share the same inter-arrival time distribution: (a) an Independent Reference Model (IRM) traffic, where requests are selected i.i.d. from a skewed (e.g., Zipf-like) item frequency distribution. By construction, the inter-arrival times of such traffic naturally form a hyperexponential distribution. (b) A hyperexponential renewal traffic, constructed by re-sampling the inter-arrival times from the same IAT distribution of the IRM traffic, but assigning items uniformly.
-We extend Che’s approximation to analyze CLOCK cache performance under both request models and address three key properties: (1) IRM always yields well-behaved, convex LRU miss ratio curves; (2) with a fixed inter-arrival time distribution, FIFO performs worse when item popularity is skewed; conversely, (3) CLOCK performs better when item popularity is skewed. We present formal proofs for these properties.</p>
-
-<p>These results explain why CLOCK outperforms LRU on certain workloads and why FIFO outperforms RANDOM in real workloads. More importantly, they suggest that neither IRM alone nor renewal models alone are sufficient to model non-LRU/non-LFU cache performance. Both skewness in item popularity (frequency) and the IAT distribution are essential.</p>
-
-<p>We propose a practical two-dimensional analytical model for real workload analysis, combining frequency- based workload decomposition with recency-based modeling for each substream. We demonstrate that this approach accurately predicts FIFO and CLOCK cache performance for real-world workloads from the CloudPhysics corpus.</p>
+<p>Multi-tenant cloud storage systems face performance interference from concurrent workloads. This project introduces a dynamic linear programming model for VMware’s vSAN architecture. Instead of relying on a centralized controller, it implements throttling logic within hypervisors. The model uses hierarchical token buckets to regulate IOPS at multiple levels, while adherence to service-level limits. By dynamically allocating resources across shared physical disks, it minimizes queue delays and enhances fairness.</p>
 
           </article>
 

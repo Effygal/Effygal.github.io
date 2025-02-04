@@ -133,8 +133,8 @@
   <a href="/projects/1_project/">
       <div class="card hoverable">
         <div class="card-body">
-          <h2 class="card-title text-lowercase">Frequency and Recency Both Matter - How FIFO and CLOCK Performance Respond to Popularity Skewness</h2>
-          <p class="card-text">We extend Che’s approximation to analyze CLOCK cache performance under both request models and address three key properties: (1) IRM always yields well-behaved, convex LRU miss ratio curves; (2) with a fixed inter-arrival time distribution, FIFO performs worse when item popularity is skewed; conversely, (3) CLOCK performs better when item popularity is skewed. We present formal proofs for these properties.</p>
+          <h2 class="card-title text-lowercase">Frequency and Recency Both Matter: How FIFO and CLOCK Performance Respond to Popularity Skewness</h2>
+          <p class="card-text">We extend Che’s approximation to analyze CLOCK cache performance under both IRM and Hyperexponential Renewal request models and address three key properties: (1) IRM always yields well-behaved, convex LRU miss ratio curves; (2) with a fixed inter-arrival time distribution, FIFO performs worse when item popularity is skewed; conversely, (3) CLOCK performs better when item popularity is skewed. We present formal proofs for these properties.</p>
           <div class="row ml-1 mr-1 p-0">
           </div>
         </div>
@@ -148,7 +148,21 @@
       <div class="card hoverable">
         <div class="card-body">
           <h2 class="card-title text-lowercase">Configurable and Cache-Accurate Trace Generation for Storage Benchmarking</h2>
-          <p class="card-text">We introduce 2DIO, a two- dimensional trace generation framework that encodes cache behaviors through a compact, quantized representation of recency patterns (IRD), combined with an independent reference model that characterizes frequency. This approach requires minimal parameters yet accurately reproduces complex, non-convex LRU miss ratio curves observed in real workloads.</p>
+          <p class="card-text">We introduce 2DIO, a two-dimensional trace generation framework that encodes cache behaviors through a compact, quantized representation of recency patterns (IRD), combined with an independent reference model that characterizes frequency. This approach requires minimal parameters yet accurately reproduces complex, non-convex LRU miss ratio curves observed in real workloads.</p>
+          <div class="row ml-1 mr-1 p-0">
+          </div>
+        </div>
+      </div>
+    </a>
+</div>
+<!-- _includes/projects.html -->
+<div class="grid-sizer"></div>
+<div class="grid-item">
+  <a href="/projects/3_project/">
+      <div class="card hoverable">
+        <div class="card-body">
+          <h2 class="card-title text-lowercase">Dynamic Hierarchical Throttling for vSAN</h2>
+          <p class="card-text">This project focuses on resource allocation in VMware vSAN using a dynamic linear programming model to optimize traffic across virtual and physical resources while adhering to SLA constraints. Instead of relying on a centralized controller, it leverages VM hypervisor capabilities to reduce queue delays. The approach also implements multi-hierarchical token control to enhance performance and fairness.</p>
           <div class="row ml-1 mr-1 p-0">
           </div>
         </div>
