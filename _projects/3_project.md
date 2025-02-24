@@ -4,7 +4,7 @@ title: "Dynamic, Hierarchical Resource Allocation with Throttling for vSAN"
 description: "This project focuses on performance isolation in VMware vSAN, using a dynamic linear programming model to optimize traffic allocations across virtual and physical disks while subject to both SLA and device capacity constraints. This approach takes advantage of the EXSi hypervisor's capabilities to throttle individual VMs, avoid heavy global data movement, and effectively isolate burst traffic."
 thumbnail: 
 importance: 1
-category: work
+category: distributed systems
 related_publications: 
 ---
 

@@ -10,10 +10,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>audios | Yirong Effy Wang</title>
+    <title>A simple cache simulator lib | Yirong Effy Wang</title>
     <meta name="author" content="Yirong Effy Wang">
-    <meta name="description" content="A simple, whitespace theme for academics. Based on [*folio](https://github.com/bogoli/-folio) design.
-">
+    <meta name="description" content="We introduce an LRU 2C-array algorithm; it is an efficient method for implementing a cache eviction policy using a fixed-size array; it is particularly suitable for scenarios where memory constraints prevent the use of linked lists.">
     <meta name="keywords" content="Computer Systems, Distributed Storage, Cache Modelling">
 
 
@@ -39,7 +38,7 @@
     <link rel="shortcut icon" href="data:image/svg+xml,&lt;svg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20100%20100%22&gt;&lt;text%20y=%22.9em%22%20font-size=%2290%22&gt;%E2%9A%9B%EF%B8%8F&lt;/text&gt;&lt;/svg&gt;">
     
     <link rel="stylesheet" href="/assets/css/main.css">
-    <link rel="canonical" href="http://localhost:4000/blog/tag/audios/">
+    <link rel="canonical" href="http://localhost:4000/projects/5_project/">
 
     <!-- Dark Mode -->
     
@@ -113,29 +112,41 @@
     <!-- Content -->
     <div class="container mt-5">
       
+        <!-- page.html -->
         <div class="post">
 
-  <header class="post-header">
-    <h1 class="post-title"> <i class="fas fa-hashtag fa-sm"></i> audios </h1>
-    <p class="post-description"> an archive of posts with this tag </p>
-  </header>
+          <header class="post-header">
+            <h1 class="post-title">A simple cache simulator lib</h1>
+            <p class="post-description">We introduce an LRU 2C-array algorithm; it is an efficient method for implementing a cache eviction policy using a fixed-size array; it is particularly suitable for scenarios where memory constraints prevent the use of linked lists.</p>
+          </header>
 
-  <article>
-    <div class="table-responsive">
-      <table class="table table-sm table-borderless">
-        
-        <tr>
-          <th scope="row">Apr 25, 2023</th>
-          <td>
-              <a class="post-link" href="/blog/2023/audios/">a post with audios</a>
-          </td>
-        </tr>
-      
-      </table>
-    </div>
-  </article>
+          <article>
+            <h2 id="abstract">Abstract</h2>
+<p>We introduce an LRU 2C-array algorithm; it is an efficient method for implementing a cache eviction policy using a fixed-size array; it is particularly suitable for scenarios where memory constraints prevent the use of linked lists.</p>
+<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cm">/*
+  +-+-+-+-+-+-+-+-+-+-+-+-+-+
+  | | |x| |x| |x| | | | | | |
+  +-+-+-+-+-+-+-+-+-+-+-+-+-+
+   0   ^         ^
+	   |         head -&gt;
+	   tail -&gt;
+  head points to first unoccupied entry
+  tail may point to empty entry
+ */</span>
+</code></pre></div></div>
+<ul>
+  <li>Instead of using a linked list, the algorithm keeps an array A of size 2C, where C represents the cache size.</li>
+  <li>Array A stores items (e.g. pointers) in the cache and NULL values to indicate empty slots.</li>
+  <li>Keeps a hash table H to store integer indexes of the items in A.</li>
+  <li>‘head’ points to the first unoccupied entry in A, and ‘tail’ points to the oldest item in A, might be NULL.</li>
+</ul>
 
-</div>
+<p>Available at <a href="https://github.com/Effygal/cachesim-cpp" rel="external nofollow noopener" target="_blank">GitHub</a>.</p>
+
+
+          </article>
+
+        </div>
 
       
     </div>
