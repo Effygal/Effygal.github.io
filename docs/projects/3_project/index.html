@@ -10,9 +10,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Dynamic Hierarchical Throttling for vSAN | Yirong Effy Wang</title>
+    <title>Dynamic, Hierarchical Resource Allocation with Throttling for vSAN | Yirong Effy Wang</title>
     <meta name="author" content="Yirong Effy Wang">
-    <meta name="description" content="This project focuses on resource allocation in VMware vSAN using a dynamic linear programming model to optimize traffic across virtual and physical resources while adhering to SLA constraints. Instead of relying on a centralized controller, it leverages VM hypervisor capabilities to reduce queue delays. The approach also implements multi-hierarchical token control to enhance performance and fairness.">
+    <meta name="description" content="This project focuses on performance isolation in VMware vSAN, using a dynamic linear programming model to optimize traffic allocations across virtual and physical disks while subject to both SLA and device capacity constraints. This approach takes advantage of the EXSi hypervisor's capabilities to throttle individual VMs, avoid heavy global data movement, and effectively isolate burst traffic.">
     <meta name="keywords" content="Computer Systems, Distributed Storage, Cache Modelling">
 
 
@@ -116,13 +116,13 @@
         <div class="post">
 
           <header class="post-header">
-            <h1 class="post-title">Dynamic Hierarchical Throttling for vSAN</h1>
-            <p class="post-description">This project focuses on resource allocation in VMware vSAN using a dynamic linear programming model to optimize traffic across virtual and physical resources while adhering to SLA constraints. Instead of relying on a centralized controller, it leverages VM hypervisor capabilities to reduce queue delays. The approach also implements multi-hierarchical token control to enhance performance and fairness.</p>
+            <h1 class="post-title">Dynamic, Hierarchical Resource Allocation with Throttling for vSAN</h1>
+            <p class="post-description">This project focuses on performance isolation in VMware vSAN, using a dynamic linear programming model to optimize traffic allocations across virtual and physical disks while subject to both SLA and device capacity constraints. This approach takes advantage of the EXSi hypervisor's capabilities to throttle individual VMs, avoid heavy global data movement, and effectively isolate burst traffic.</p>
           </header>
 
           <article>
             <h2 id="abstract">Abstract</h2>
-<p>Multi-tenant cloud storage systems face performance interference from concurrent workloads. This project introduces a dynamic linear programming model for VMware’s vSAN architecture. Instead of relying on a centralized controller, it implements throttling logic within hypervisors. The model uses hierarchical token buckets to regulate IOPS at multiple levels, while adherence to service-level limits. By dynamically allocating resources across shared physical disks, it minimizes queue delays and enhances fairness.</p>
+<p>Performance isolation is critical in multi-tenant systems like VMware vSAN. We propose a hierarchical IOPS allocation design: tenants receive an overall IOPS quota, which is subdivided among its virtual disks, each striped over a fixed set of physical devices. We present a linear programming formulation to periodically recompute the rate allocation for each virtual disk, optimized for total system throughput, while subject to the estimated virtual disk demands, tenant-level SLAs, and the capacity limits of the underlying physical devices. Taking advantage of the vSphere hypervisor’s throttling mechanism, our simulation shows this approach avoids heavy global data movement, effectively isolates burst traffic, reduces congestion, and only incurs small runtime overhead by distributing the computation.</p>
 
           </article>
 
