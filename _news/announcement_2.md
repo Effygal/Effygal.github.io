@@ -10,7 +10,7 @@ related_posts: false
 [](_posts/system_day.md)
 
 ***
-I gave a speech on the same topic for the last-years' event. Let me know if you are interested in more details.
+I gave a speech on the same topic for the last-years' event.
 <br/> 
 
-<img src="assets/img/Sysday_23.png" align="left" width="250" style="display: block;"/>
+<img src="assets/img/Sysday_23.webp" align="left" width="250" style="display: block;"/>

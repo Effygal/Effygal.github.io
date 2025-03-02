@@ -9,5 +9,5 @@ I'll be attending the [New England Systems Day 2025](https://khoury-srg.github.i
 
 ---
 Last year, I gave a talk on high-fidelity trace synthesis for storage benchmarking.
-<img src="assets/img/srg2024.png" alt="NESD 2024" style="width:500px; height:300px;">
+<img src="assets/img/srg2024.webp" align="left" width="250" style="display: block;"/>
 

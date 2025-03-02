@@ -9,7 +9,7 @@
 - title: Education
   type: time_table
   contents:
-    - title: PhD student
+    - title: PhD in Computer Science
       institution: Northeastern University, Boston, MA, USA
     - title: MSc
       institution: University of Southampton, UK
@@ -65,7 +65,7 @@
       items: 
         - Caching.
         - Analytical Modeling.
-        - System simulation.
+        - System Simulation.
     - title: Computer Architecture.
       items:
         - Emulation.

@@ -5,7 +5,7 @@ permalink: /projects/
 nav: true
 nav_order: 2
 display_categories: [analytical modeling, distributed systems, open-source]
-horizontal: false
+horizontal: true
 ---
 
 <!-- pages/projects.md -->
