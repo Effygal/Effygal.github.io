@@ -10,9 +10,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Dynamic, Hierarchical Resource Allocation with Throttling for vSAN | Yirong Effy Wang</title>
+    <title>Fair Resource Allocation with Source-Side Throttling and FCFS Destination-Side Servicing | Yirong Effy Wang</title>
     <meta name="author" content="Yirong Effy Wang">
-    <meta name="description" content="This project focuses on performance isolation in VMware vSAN, using a dynamic linear programming model to optimize traffic allocations across virtual and physical disks while subject to both SLA and device capacity constraints. This approach takes advantage of the EXSi hypervisor's capabilities to throttle individual VMs, avoid heavy global data movement, and effectively isolate burst traffic.">
+    <meta name="description" content="This project demonstrates a proof-of-concept approach for addressing performance isolation, QoS, and device capacity constraints in multi-tenant cloud environments using a unified linear programming model.">
     <meta name="keywords" content="Computer Systems, Distributed Storage, Cache Modelling">
 
 
@@ -26,7 +26,7 @@
     <!-- Fonts & Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" integrity="sha256-HtsXJanqjKTc8vVQjO4YMhiqFoXkfBsjBWcX91T1jr8=" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/academicons@1.9.1/css/academicons.min.css" integrity="sha256-i1+4qU2G2860dGGIOJscdC30s9beBXjFfzjWLjBRsBg=" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700%7CRoboto+Slab:100,300,400,500,700%7CMaterial+Icons">
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:100,300,400,500,700|Material+Icons">
 
     <!-- Code Syntax Highlighting -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jwarby/jekyll-pygments-themes@master/github.css" media="" id="highlight_theme_light">
@@ -116,13 +116,21 @@
         <div class="post">
 
           <header class="post-header">
-            <h1 class="post-title">Dynamic, Hierarchical Resource Allocation with Throttling for vSAN</h1>
-            <p class="post-description">This project focuses on performance isolation in VMware vSAN, using a dynamic linear programming model to optimize traffic allocations across virtual and physical disks while subject to both SLA and device capacity constraints. This approach takes advantage of the EXSi hypervisor's capabilities to throttle individual VMs, avoid heavy global data movement, and effectively isolate burst traffic.</p>
+            <h1 class="post-title">Fair Resource Allocation with Source-Side Throttling and FCFS Destination-Side Servicing</h1>
+            <p class="post-description">This project demonstrates a proof-of-concept approach for addressing performance isolation, QoS, and device capacity constraints in multi-tenant cloud environments using a unified linear programming model.</p>
           </header>
 
           <article>
             <h2 id="abstract">Abstract</h2>
-<p>Performance isolation is critical in multi-tenant systems like VMware vSAN. We propose a hierarchical IOPS allocation design: tenants receive an overall IOPS quota, which is subdivided among its virtual disks, each striped over a fixed set of physical devices. We present a linear programming formulation to periodically recompute the rate allocation for each virtual disk, optimized for total system throughput, while subject to the estimated virtual disk demands, tenant-level SLAs, and the capacity limits of the underlying physical devices. Taking advantage of the vSphere hypervisor’s throttling mechanism, our simulation shows this approach avoids heavy global data movement, effectively isolates burst traffic, reduces congestion, and only incurs small runtime overhead by distributing the computation.</p>
+<p>Performance isolation is essential but challenging in multi-tenant cloud storage systems. In private clouds such as vSAN, multiple virtual disks may be striped over the same physical device, causing congestions especially when some workloads experience bursts.</p>
+
+<p>We argue that an effective resource allocation mechanism should be lightweight, distributed, and non-intrusive, eliminating the need for a single bottleneck controller, or reliance on specialized device features.</p>
+
+<p>We propose a source-side hierarchical IOPS allocation design, scheduling per-VM I/Os using the hypervisor’s throttling mechanism, while preserving the common FCFS servicing assumption at the physical devices. A unified linear programming formula is triggered in a feedback loop to solve for the optimal IOPS rate for each virtual disk, maximizing system throughput under QoS constraints and physical device capacities.</p>
+
+<p>Simulation demonstrates that this design effectively throttles I/O at an optimized rate, isolates burst traffic at the source, and significantly reduces congestion at the destination, thereby lowering overall end-to-end latency.</p>
+
+<p>Available at <a href="https://github.com/Effygal/vm-qos" rel="external nofollow noopener" target="_blank">GitHub</a>.</p>
 
           </article>
 

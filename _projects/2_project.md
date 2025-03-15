@@ -2,7 +2,6 @@
 layout: page
 title: "Configurable and Cache-Accurate Trace Generation for Storage Benchmarking"
 description: "We introduce 2DIO, a two-dimensional trace generation framework that encodes cache behaviors through a compact, quantized representation of recency patterns (IRD), combined with an independent reference model that characterizes frequency. This approach requires minimal parameters yet accurately reproduces complex, non-convex LRU miss ratio curves observed in real workloads." 
-thumbnail: MarkovChain4States.pdf
 importance: 1
 category: analytical modeling
 related_publications: 

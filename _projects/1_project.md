@@ -2,7 +2,6 @@
 layout: page
 title: "Properties of FIFO and CLOCK cache under general renewal traffic"
 description: "We extend Che’s approximation to analyze CLOCK cache performance under both IRM and Hyperexponential Renewal request models and address three key properties: (1) IRM always yields well-behaved, convex LRU miss ratio curves; (2) with a fixed inter-arrival time distribution, FIFO performs worse when item popularity is skewed; conversely, (3) CLOCK performs better when item popularity is skewed. We present formal proofs for these properties." 
-thumbnail: MarkovChain4States.pdf
 importance: 1
 category: analytical modeling 
 related_publications: 
@@ -15,3 +14,5 @@ We extend Che’s approximation to analyze CLOCK cache performance under both re
 These results explain why CLOCK outperforms LRU on certain workloads and why FIFO outperforms RANDOM in real workloads. More importantly, they suggest that neither IRM alone nor renewal models alone are sufficient to model non-LRU/non-LFU cache performance. Both skewness in item popularity (frequency) and the IAT distribution are essential.
 
 We propose a practical two-dimensional analytical model for real workload analysis, combining frequency- based workload decomposition with recency-based modeling for each substream. We demonstrate that this approach accurately predicts FIFO and CLOCK cache performance for real-world workloads from the CloudPhysics corpus.
+
+<!-- ![](../clock-levels.webp) -->

@@ -13,5 +13,5 @@ The LSM-tree is not inherently optimized for efficient reads or space utilizatio
 We provide emulations built on a skiplist-based LSM tree. 
 
 
-Available at [GitHub](https://github.com/Effygal/ISC-lsm-tree).
+Available at [GitHub](https://github.com/Effygal/isc-lsm-tree).
 
