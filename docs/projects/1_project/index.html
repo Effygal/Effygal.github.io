@@ -12,7 +12,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Properties of FIFO and CLOCK cache under general renewal traffic | Yirong Effy Wang</title>
     <meta name="author" content="Yirong Effy Wang">
-    <meta name="description" content="We extend Che’s approximation to analyze CLOCK cache performance under both IRM and Hyperexponential Renewal request models and address three key properties: (1) IRM always yields well-behaved, convex LRU miss ratio curves; (2) with a fixed inter-arrival time distribution, FIFO performs worse when item popularity is skewed; conversely, (3) CLOCK performs better when item popularity is skewed. We present formal proofs for these properties.">
+    <meta name="description" content="We extend Che’s approximation to the canonical second-chance CLOCK under general renewal traffic and formally prove two properties: (1) LRU miss rate is convex over cache size under IRM; (2) CLOCK’s miss rate is Schur-concave over request rates.">
     <meta name="keywords" content="Computer Systems, Distributed Storage, Cache Modelling">
 
 
@@ -117,19 +117,15 @@
 
           <header class="post-header">
             <h1 class="post-title">Properties of FIFO and CLOCK cache under general renewal traffic</h1>
-            <p class="post-description">We extend Che’s approximation to analyze CLOCK cache performance under both IRM and Hyperexponential Renewal request models and address three key properties: (1) IRM always yields well-behaved, convex LRU miss ratio curves; (2) with a fixed inter-arrival time distribution, FIFO performs worse when item popularity is skewed; conversely, (3) CLOCK performs better when item popularity is skewed. We present formal proofs for these properties.</p>
+            <p class="post-description">We extend Che’s approximation to the canonical second-chance CLOCK under general renewal traffic and formally prove two properties: (1) LRU miss rate is convex over cache size under IRM; (2) CLOCK’s miss rate is Schur-concave over request rates.</p>
           </header>
 
           <article>
             <h2 id="abstract">Abstract</h2>
-<p>Consider two request streams that share the same inter-arrival time distribution: (a) an Independent Reference Model (IRM) traffic, where requests are selected i.i.d. from a skewed (e.g., Zipf-like) item frequency distribution. By construction, the inter-arrival times of such traffic naturally form a hyperexponential distribution. (b) A hyperexponential renewal traffic, constructed by re-sampling the inter-arrival times from the same IAT distribution of the IRM traffic, but assigning items uniformly.
-We extend Che’s approximation to analyze CLOCK cache performance under both request models and address three key properties: (1) IRM always yields well-behaved, convex LRU miss ratio curves; (2) with a fixed inter-arrival time distribution, FIFO performs worse when item popularity is skewed; conversely, (3) CLOCK performs better when item popularity is skewed. We present formal proofs for these properties.</p>
+<p>We present exact analyses of cache performance under renewal traffic models that isolate frequency skew from temporal locality. Focusing on FIFO and a family of CLOCK caches with reference bits, we derive exact miss rate expressions and validate them against both synthetic workloads (MAE &lt; 0.3\%) and production block‐storage traces (MAE &lt; 2.3\%).</p>
 
-<p>These results explain why CLOCK outperforms LRU on certain workloads and why FIFO outperforms RANDOM in real workloads. More importantly, they suggest that neither IRM alone nor renewal models alone are sufficient to model non-LRU/non-LFU cache performance. Both skewness in item popularity (frequency) and the IAT distribution are essential.</p>
-
-<p>We propose a practical two-dimensional analytical model for real workload analysis, combining frequency- based workload decomposition with recency-based modeling for each substream. We demonstrate that this approach accurately predicts FIFO and CLOCK cache performance for real-world workloads from the CloudPhysics corpus.</p>
-
-<!-- ![](../clock-levels.webp) -->
+<p>A common belief is that while CLOCK respects recency, it does not take frequency into account. Our main theorem challenges this belief, extend those of van den Berg and Towsley (1993), showing that CLOCK’s miss rate is Schur-concave over the request rate vector. Several properties then emerge: with temporal locality held fixed, increasing frequency skew degrades FIFO performance but enhances CLOCK’s performance, thereby explaining why CLOCK can outperform LRU and why FIFO often outperforms RANDOM in practice.
+<!-- ![](../clock-levels.webp) --></p>
 
           </article>
 

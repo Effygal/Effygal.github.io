@@ -1,6 +1,6 @@
 ---
 layout: page
-title: "A simple cache simulator lib"
+title: "A cache simulation library"
 description: "We introduce an LRU 2C-array algorithm; it is an efficient method for implementing a cache eviction policy using a fixed-size array; it is particularly suitable for scenarios where memory constraints prevent the use of linked lists."
 importance: 1
 category: open-source

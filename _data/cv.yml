@@ -3,49 +3,39 @@
   contents:
     - name: Full Name
       value: Yirong (Effy) Wang
-    - name: Languages
-      value: English, Mandarin
 
 - title: Education
   type: time_table
   contents:
-    - title: PhD in Computer Science
+    - title: PhD student
       institution: Northeastern University, Boston, MA, USA
     - title: MSc
       institution: University of Southampton, UK
-
     - title: BE
       institution: Tianjin Polytechnic University, China
 
-- title: Experience
-  type: time_table
-  contents:
-    - title: Research Assistant
-      institution: Khoury Collage of Computer Science, Northeastern University
-      # year: 2021 - Present
-      description:
-        - Research in cache modeling; study properties of different cache policies under varying workload assumptions.
-        - Design high-fidelity workload synthesis methods for various storage benchmarking applications.
-        - Collaborate with the VMware vSAN team to develop QoS modeling for fair resource allocation and performance isolation.
-        - Cache Modeling / Trace-driven Simulations / Storage Benchmarking / File Systems / VMs / Object Storage
-        # - title: Description 3.
-        #   contents:
-        #     - Sub-description 1.
-        #     - Sub-description 2.
-    - title: Teaching Assistant
-      institution: Khoury Collage of Computer Science, Northeastern University
-      # year: 2022 - 2023
-      description:
-        - TA for CS 5600 Computer Systems (3 semesters).
-        - Providing tutorials on system programming, debugging with GDB, and fundamentals of operating systems.
-        - Linux / Operating Systems / System Programming
+# - title: Experience
+#   type: time_table
+#   contents:
+#     - title: Research Assistant
+#       institution: Khoury Collage of Computer Science, Northeastern University
+#       # year:  - Present
+      
+#         # - title: Description 3.
+#         #   contents:
+#         #     - Sub-description 1.
+#         #     - Sub-description 2.
+#     - title: Teaching Assistant
+#       institution: Khoury Collage of Computer Science, Northeastern University
+#       # year: 2022 - 2023
+#       # description:
+       
 
-    - title: System Administration
-      institution: Yunnan University, China.
-      # year: 2014 - 2021
-      description:
-        - Administrate university network infrastructure, servers, and security.
-        - Sysadmin / Operating Systems / Linux
+    # - title: System Administration
+    #   institution: Yunnan University, China.
+    #   # year:  - 
+    #   # description:
+      
 
 # - title: Honors and Awards
 #   type: time_table

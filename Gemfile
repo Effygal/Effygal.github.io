@@ -25,3 +25,12 @@ group :other_plugins do
     gem 'feedjira'
     gem 'httparty'
 end
+
+gem "csv"         
+   
+
+gem "base64", "~> 0.2.0"
+
+gem "bigdecimal", "~> 3.1"
+
+gem "observer", "~> 0.1.2"

@@ -135,7 +135,7 @@
 <div class="col-md-12">
 <div class="card-body">
             <h3 class="card-title text-lowercase">Properties of FIFO and CLOCK cache under general renewal traffic</h3>
-            <p class="card-text">We extend Che’s approximation to analyze CLOCK cache performance under both IRM and Hyperexponential Renewal request models and address three key properties: (1) IRM always yields well-behaved, convex LRU miss ratio curves; (2) with a fixed inter-arrival time distribution, FIFO performs worse when item popularity is skewed; conversely, (3) CLOCK performs better when item popularity is skewed. We present formal proofs for these properties.</p>
+            <p class="card-text">We extend Che’s approximation to the canonical second-chance CLOCK under general renewal traffic and formally prove two properties: (1) LRU miss rate is convex over cache size under IRM; (2) CLOCK’s miss rate is Schur-concave over request rates.</p>
             <div class="row ml-1 mr-1 p-0"></div>
           </div>
         </div>
@@ -149,7 +149,7 @@
 <div class="col-md-12">
 <div class="card-body">
             <h3 class="card-title text-lowercase">Configurable and Cache-Accurate Trace Generation for Storage Benchmarking</h3>
-            <p class="card-text">We introduce 2DIO, a two-dimensional trace generation framework that encodes cache behaviors through a compact, quantized representation of recency patterns (IRD), combined with an independent reference model that characterizes frequency. This approach requires minimal parameters yet accurately reproduces complex, non-convex LRU miss ratio curves observed in real workloads.</p>
+            <p class="card-text">2DIO is a trace generator creating cache-accurate stressful I/O workloads. While existing tools are limited to generating traces with well-behaved, concave hit ratio curves, 2DIO produces ones with tunable complex cache behaviors, particularly performance cliffs and plateaus.</p>
             <div class="row ml-1 mr-1 p-0"></div>
           </div>
         </div>
@@ -164,20 +164,6 @@
   <!-- Generate cards for each project -->
   <div class="container">
     <div class="row row-cols-2">
-<div class="card-item col">
-<a href="/projects/3_project/"><div class="card hoverable">
-      <div class="row g-0">
-<div class="col-md-12">
-<div class="card-body">
-            <h3 class="card-title text-lowercase">Fair Resource Allocation with Source-Side Throttling and FCFS Destination-Side Servicing</h3>
-            <p class="card-text">This project demonstrates a proof-of-concept approach for addressing performance isolation, QoS, and device capacity constraints in multi-tenant cloud environments using a unified linear programming model.</p>
-            <div class="row ml-1 mr-1 p-0"></div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </a>
-</div>
 <div class="card-item col">
 <a href="/projects/4_project/"><div class="card hoverable">
       <div class="row g-0">
@@ -218,7 +204,7 @@
       <div class="row g-0">
 <div class="col-md-12">
 <div class="card-body">
-            <h3 class="card-title text-lowercase">A simple cache simulator lib</h3>
+            <h3 class="card-title text-lowercase">A cache simulation library</h3>
             <p class="card-text">We introduce an LRU 2C-array algorithm; it is an efficient method for implementing a cache eviction policy using a fixed-size array; it is particularly suitable for scenarios where memory constraints prevent the use of linked lists.</p>
             <div class="row ml-1 mr-1 p-0"></div>
           </div>
