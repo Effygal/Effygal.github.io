@@ -1,14 +1,15 @@
 ---
 layout: page
-title: "Properties of FIFO and CLOCK cache under general renewal traffic"
-description: "We extend Che’s approximation to the canonical second-chance CLOCK under general renewal traffic and formally prove two properties: (1) LRU miss rate is convex over cache size under IRM; (2) CLOCK’s miss rate is Schur-concave over request rates." 
+title: "How FIFO and CLOCK respond to ferquency skew"
+description: "We extend van den Berg and Toswley’s proof of the Schur-convexity of FIFO miss ratio to explain why FIFO out-performs RANDOM on real workloads, while using our proofs to explain why CLOCK often out-performs LRU." 
 importance: 1
 category: analytical modeling 
 related_publications: 
 ---
 
 ## Abstract
-We present exact analyses of cache performance under renewal traffic models that isolate frequency skew from temporal locality. Focusing on FIFO and a family of CLOCK caches with reference bits, we derive exact miss rate expressions and validate them against both synthetic workloads (MAE < 0.3\%) and production block‐storage traces (MAE < 2.3\%). 
-  
-A common belief is that while CLOCK respects recency, it does not take frequency into account. Our main theorem challenges this belief, extend those of van den Berg and Towsley (1993), showing that CLOCK’s miss rate is Schur-concave over the request rate vector. Several properties then emerge: with temporal locality held fixed, increasing frequency skew degrades FIFO performance but enhances CLOCK’s performance, thereby explaining why CLOCK can outperform LRU and why FIFO often outperforms RANDOM in practice.
+The performance of non-LRU or LFU caches is affected by both frequency and recency, but while prior work on replacement policies has treated these factors intuitively, analytic models have not delved deeply into their separate roles. We present a framework to isolate
+the effects of each dimension, allowing explicit derivation of miss ratio formulas as frequency and recency are varied, and validate our
+models in simulation, with mean absolute error for FIFO and CLOCK of < 0.3\% for synthetic workloads and < 2.3\% for production block storage traces.
+Our main theorem shows that the CLOCK miss ratio function is Schur-concave in the frequency vector; for fixed recency distribution, miss ratio decreases with increasing frequency skew. Real workloads are not purely IRM, yet contain significant frequency skew; we extend van den Berg and Toswley’s proof of the Schur-convexity of FIFO miss ratio to explain why FIFO out-performs RANDOM on real workloads, while using our proofs to explain why CLOCK often out-performs LRU.
 <!-- ![](../clock-levels.webp) -->

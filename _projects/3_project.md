@@ -1,7 +1,7 @@
 ---
 layout: page
-title: "Fair Resource Allocation with Source-Side Throttling and FCFS Destination-Side Servicing"
-description: "This project demonstrates a proof-of-concept approach for addressing performance isolation, QoS, and device capacity constraints in multi-tenant cloud environments using a unified linear programming model." 
+title: "QoS, Fairness and Isolation in One Formula"
+description: "We demonstrate a linear program for optimal IOPS allocation while respecting QoS and preserving performance isolation." 
 importance: 1
 category: distributed systems,
 related_publications: 
