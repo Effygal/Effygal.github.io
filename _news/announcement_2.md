@@ -6,11 +6,7 @@ inline: true
 related_posts: false
 ---
 
-<a href="https://khoury-srg.github.io/Northeastern-Systems-Day-2024/">Northeastern Systems Day 2024</a>  is now open for registration! I'll be attending and give a speech on reuse distance-based cache modeling matrics.
+<a href="https://khoury-srg.github.io/Northeastern-Systems-Day-2024/">Northeastern Systems Day 2024</a> is now open for registration! I’ll be giving a talk on workload characterization using various stochastic processes and Markov models.
 [](_posts/system_day.md)
-
-***
-I gave a speech on the same topic for the last-years' event.
-<br/> 
 
 <img src="assets/img/Sysday_23.webp" align="left" width="250" style="display: block;"/>

@@ -5,9 +5,9 @@ inline: true
 related_posts: false
 ---
 
-I'll be attending the [New England Systems Day 2025](https://khoury-srg.github.io/nesd25/) conference in Boston. 
+[New England Systems Day 2025](https://khoury-srg.github.io/nesd25/) is now open for registration! 
+Last year I gave a talk on workload characterization with stochastic processes and Markov models. This year I’m excited to build on that with new insights into high-fidelity trace synthesis for storage benchmarking. Hope to see you there!
 
 ---
-Last year, I gave a talk on high-fidelity trace synthesis for storage benchmarking.
 <img src="assets/img/srg2024.webp" align="left" width="250" style="display: block;"/>
 

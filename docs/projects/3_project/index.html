@@ -12,7 +12,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>QoS, Fairness and Isolation in One Formula | Yirong Effy Wang</title>
     <meta name="author" content="Yirong Effy Wang">
-    <meta name="description" content="We demonstrate a linear program for optimal IOPS allocation while respecting QoS and preserving performance isolation.">
+    <meta name="description" content="A unified linear programming formula for optimal per-VM IOPS allocation under QoS and device constraints.">
     <meta name="keywords" content="Computer Systems, Distributed Storage, Cache Modelling">
 
 
@@ -117,16 +117,14 @@
 
           <header class="post-header">
             <h1 class="post-title">QoS, Fairness and Isolation in One Formula</h1>
-            <p class="post-description">We demonstrate a linear program for optimal IOPS allocation while respecting QoS and preserving performance isolation.</p>
+            <p class="post-description">A unified linear programming formula for optimal per-VM IOPS allocation under QoS and device constraints.</p>
           </header>
 
           <article>
             <h2 id="abstract">Abstract</h2>
-<p>Performance isolation remains challenging in multi-tenant cloud storage. In private clouds like VMware vSAN, virtual disks striped over shared devices cause congestion, especially during bursts.</p>
+<p>Performance isolation remains challenging in multi-tenant cloud storage. In private clouds like VMware vSAN, “noisy neighbor” effects typically occur under bursty traffic.</p>
 
-<p>We propose a lightweight, non-intrusive resource allocation mechanism that eliminates reliance on single bottleneck controllers or specialized device features.</p>
-
-<p>Our design schedules per-VM I/Os using hypervisor throttling, preserving FCFS servicing at devices. A unified linear programming formula runs in a feedback loop to solve optimal IOPS rates per virtual disk, maximizing throughput under QoS and device capacity constraints.</p>
+<p>We propose a lightweight, non-intrusive resource allocation formula that eliminates reliance on single bottleneck controllers or specialized device features. This design schedules per-VM I/Os using hypervisor throttling, preserving FCFS service assumption at device ends. A unified linear programming formula runs in a feedback loop to solve optimal IOPS rate allocation per virtual disk, maximizing throughput under QoS and device capacity constraints.</p>
 
 <p>Simulations show effective I/O throttling, burst traffic isolation at the source, reduced destination congestion, and significantly lower end-to-end latency.</p>
 
