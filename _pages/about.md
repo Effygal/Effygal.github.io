@@ -10,7 +10,7 @@ profile:
   image: avatar.webp
   image_circular: false 
   address: >
-    <p>effywang57 AT gmail DOT com</p>
+    <p>effywn AT gmail DOT com</p>
     <p>Boston, MA</p>
 
 news: true  # includes a list of news items
