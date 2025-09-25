@@ -2,8 +2,8 @@
 layout: page
 title: "QoS, Fairness and Isolation in One Formula"
 description: "A unified linear programming formula for optimal per-VM IOPS allocation under QoS and device constraints." 
-importance: 1
-category: distributed systems,
+importance: 2
+category: analytical modeling
 related_publications: 
 ---
 

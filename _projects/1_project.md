@@ -1,6 +1,6 @@
 ---
 layout: page
-title: "How FIFO and CLOCK respond to ferquency skew"
+title: "How FIFO and CLOCK respond to frequency skew"
 description: "We extend van den Berg and Toswley’s proof of the Schur-convexity of FIFO miss ratio to explain why FIFO out-performs RANDOM on real workloads, while using our proofs to explain why CLOCK often out-performs LRU." 
 importance: 1
 category: analytical modeling 

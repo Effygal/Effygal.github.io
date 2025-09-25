@@ -3,7 +3,7 @@ layout: page
 title: "Configurable and Cache-Accurate Trace Generation for Storage Benchmarking"
 description: "2DIO is a trace generator creating cache-accurate and stressful I/O workloads. While existing tools are limited to generating traces with well-behaved, concave hit ratio curves, 2DIO produces ones with tunable complex cache behaviors, particularly performance cliffs and plateaus." 
 importance: 1
-category: analytical modeling
+category: open-source
 related_publications: EuroSys'26
 ---
 

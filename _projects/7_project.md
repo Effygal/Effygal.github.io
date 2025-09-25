@@ -3,7 +3,7 @@ layout: page
 title: "Emulating an ISC-enabled LSM-tree for Read Optimization"
 description: "This project presents a proof of concept for an ISC-enabled LSM-tree, aiming to enhance read performance and space efficiency by offloading parallel search computations from the host to storage devices."
 thumbnail: 
-importance: 2
+importance: 3
 category: distributed systems
 related_publications: 
 ---

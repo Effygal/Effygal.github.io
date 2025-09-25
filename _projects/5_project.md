@@ -1,14 +1,14 @@
 ---
 layout: page
-title: "A cache simulation library"
-description: "We introduce an LRU 2C-array algorithm; it is an efficient method for implementing a cache eviction policy using a fixed-size array; it is particularly suitable for scenarios where memory constraints prevent the use of linked lists."
+title: "A library for cache simulation"
+description: "This package implements a novel algorithm for the LRU cache eviction policy using a fixed-size array."
 importance: 1
 category: open-source
 related_publications: 
 ---
 
 ## Abstract
-We introduce an LRU 2C-array algorithm; it is an efficient method for implementing a cache eviction policy using a fixed-size array; it is particularly suitable for scenarios where memory constraints prevent the use of linked lists. 
+We introduce an LRU 2C-array algorithm; it is particularly suitable for scenarios where memory constraints prevent the use of linked lists. 
 ```cpp
 /*
   +-+-+-+-+-+-+-+-+-+-+-+-+-+
