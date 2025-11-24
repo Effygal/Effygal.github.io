@@ -10,8 +10,6 @@ related_publications:
 ## Abstract
 Performance isolation remains challenging in multi-tenant cloud storage. In private clouds like VMware vSAN, "noisy neighbor" effects typically occur under bursty traffic.
 
-We propose a lightweight, non-intrusive resource allocation formula that eliminates reliance on single bottleneck controllers or specialized device features. This design schedules per-VM I/Os using hypervisor throttling, preserving FCFS service assumption at device ends. A unified linear programming formula runs in a feedback loop to solve optimal IOPS rate allocation per virtual disk, maximizing throughput under QoS and device capacity constraints.
-
-Simulations show effective performance isolation through token-bucket-based I/O throttling, reduced device contention, and lower end-to-end latency for well-behaved workloads.
+We designed a unified linear-programming-based controller that dynamically allocates IOPS limits across virtual disks in multi-tenant cloud storage, subject to both QoS targets and shared capacity constraints. The model adapts to workload fluctuations over time, and simulations demonstrate more stable throughput during bursts and improved latency consistency.
 
 Available at [GitHub](https://github.com/Effygal/vm-qos).

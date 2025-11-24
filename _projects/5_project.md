@@ -8,7 +8,7 @@ related_publications:
 ---
 
 ## Abstract
-We introduce an LRU 2C-array algorithm; it is particularly suitable for scenarios where memory constraints prevent the use of linked lists. 
+We introduce an array-based LRU algorithm; it is particularly suitable for scenarios where memory constraints prevent the use of linked lists. 
 ```cpp
 /*
   +-+-+-+-+-+-+-+-+-+-+-+-+-+
