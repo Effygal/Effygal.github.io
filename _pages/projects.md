@@ -4,7 +4,7 @@ title: "Projects"
 permalink: /projects/
 nav: true
 nav_order: 2
-display_categories: [analytical modeling, distributed systems, open-source]
+display_categories: [analytical modeling, microbenchmarks, distributed systems]
 horizontal: true
 ---
 
@@ -19,7 +19,7 @@ horizontal: true
   <!-- Generate cards for each project -->
   {% if page.horizontal -%}
   <div class="container">
-    <div class="row row-cols-2">
+    <div class="row row-cols-1">
     {%- for project in sorted_projects -%}
       {% include projects_horizontal.html %}
     {%- endfor %}
@@ -40,7 +40,7 @@ horizontal: true
   <!-- Generate cards for each project -->
   {% if page.horizontal -%}
   <div class="container">
-    <div class="row row-cols-2">
+    <div class="row row-cols-1">
     {%- for project in sorted_projects -%}
       {% include projects_horizontal.html %}
     {%- endfor %}

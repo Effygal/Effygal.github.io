@@ -1,7 +1,7 @@
 ---
 layout: page
-title: "How FIFO and CLOCK respond to frequency skew"
-description: "We extend van den Berg and Toswley’s proof of the Schur-convexity of FIFO miss ratio to explain why FIFO out-performs RANDOM on real workloads, while using our proofs to explain why CLOCK often out-performs LRU." 
+title: "TTL Approximations for a Family of CLOCK-Like Cache Replacement Policies"
+description: We extend TTL approximations to a family of CLOCK-like cache policies and adapt van den Berg and Towsley’s Schur-convexity proof for the FIFO miss ratio, establishing Schur-concavity results for CLOCK. This helps explain why FIFO outperforms RANDOM on real workloads and why CLOCK often outperforms LRU." 
 importance: 1
 category: analytical modeling 
 related_publications: 
@@ -12,4 +12,3 @@ The performance of non-LRU or LFU caches is affected by both frequency and recen
 the effects of each dimension, allowing explicit derivation of miss ratio formulas as frequency and recency are varied, and validate our
 models in simulation, with mean absolute error for FIFO and CLOCK of < 0.3\% for synthetic workloads and < 2.3\% for production block storage traces.
 Our main theorem shows that the CLOCK miss ratio function is Schur-concave in the frequency vector; for fixed recency distribution, miss ratio decreases with increasing frequency skew. Real workloads are not purely IRM, yet contain significant frequency skew; we extend van den Berg and Toswley’s proof of the Schur-convexity of FIFO miss ratio to explain why FIFO out-performs RANDOM on real workloads, while using our proofs to explain why CLOCK often out-performs LRU.
-<!-- ![](../clock-levels.webp) -->

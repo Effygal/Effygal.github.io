@@ -128,14 +128,14 @@
   <h2 class="category">analytical modeling</h2>
   <!-- Generate cards for each project -->
   <div class="container">
-    <div class="row row-cols-2">
+    <div class="row row-cols-1">
 <div class="card-item col">
 <a href="/projects/1_project/"><div class="card hoverable">
       <div class="row g-0">
 <div class="col-md-12">
 <div class="card-body">
-            <h3 class="card-title text-lowercase">How FIFO and CLOCK respond to frequency skew</h3>
-            <p class="card-text">We extend van den Berg and Toswley’s proof of the Schur-convexity of FIFO miss ratio to explain why FIFO out-performs RANDOM on real workloads, while using our proofs to explain why CLOCK often out-performs LRU.</p>
+            <h3 class="card-title">TTL Approximations for a Family of CLOCK-Like Cache Replacement Policies</h3>
+            <p class="card-text">We extend TTL approximations to a family of CLOCK-like cache policies and adapt van den Berg and Towsley’s Schur-convexity proof for the FIFO miss ratio, establishing Schur-concavity results for CLOCK. This helps explain why FIFO outperforms RANDOM on real workloads and why CLOCK often outperforms LRU."</p>
             <div class="row ml-1 mr-1 p-0"></div>
           </div>
         </div>
@@ -144,12 +144,12 @@
   </a>
 </div>
 <div class="card-item col">
-<a href="/projects/3_project/"><div class="card hoverable">
+<a href="/projects/8_project/"><div class="card hoverable">
       <div class="row g-0">
 <div class="col-md-12">
 <div class="card-body">
-            <h3 class="card-title text-lowercase">QoS, Fairness and Isolation in One Formula</h3>
-            <p class="card-text">A unified linear programming formula for optimal per-VM IOPS allocation under QoS and device constraints.</p>
+            <h3 class="card-title">Performance Analysis of the Randomized SIEVE/CLOCK Cache Replacement Algorithm</h3>
+            <p class="card-text">We introduce a randomized version of the SIEVE/CLOCK algorithm that uses ⌈log2(K+1)⌉ ≥ 1 access bits per cached item, and present a heterogeneous mean-field approximation of its performance."</p>
             <div class="row ml-1 mr-1 p-0"></div>
           </div>
         </div>
@@ -160,51 +160,16 @@
 
     </div>
   </div>
-  <h2 class="category">distributed systems</h2>
+  <h2 class="category">microbenchmarks</h2>
   <!-- Generate cards for each project -->
   <div class="container">
-    <div class="row row-cols-2">
-<div class="card-item col">
-<a href="/projects/4_project/"><div class="card hoverable">
-      <div class="row g-0">
-<div class="col-md-12">
-<div class="card-body">
-            <h3 class="card-title text-lowercase">A Distributed Object Store built on Conventional File System</h3>
-            <p class="card-text">This is an emulation of a distributed store system built on Zoned Namespace SSDs. The system guarantees strong consistency and fault tolerant.</p>
-            <div class="row ml-1 mr-1 p-0"></div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </a>
-</div>
-<div class="card-item col">
-<a href="/projects/7_project/"><div class="card hoverable">
-      <div class="row g-0">
-<div class="col-md-12">
-<div class="card-body">
-            <h3 class="card-title text-lowercase">Emulating an ISC-enabled LSM-tree for Read Optimization</h3>
-            <p class="card-text">This project presents a proof of concept for an ISC-enabled LSM-tree, aiming to enhance read performance and space efficiency by offloading parallel search computations from the host to storage devices.</p>
-            <div class="row ml-1 mr-1 p-0"></div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </a>
-</div>
-
-    </div>
-  </div>
-  <h2 class="category">open-source</h2>
-  <!-- Generate cards for each project -->
-  <div class="container">
-    <div class="row row-cols-2">
+    <div class="row row-cols-1">
 <div class="card-item col">
 <a href="/projects/2_project/"><div class="card hoverable">
       <div class="row g-0">
 <div class="col-md-12">
 <div class="card-body">
-            <h3 class="card-title text-lowercase">Configurable and Cache-Accurate Trace Generation for Storage Benchmarking</h3>
+            <h3 class="card-title">Configurable and Cache-Accurate Trace Generation for Storage Benchmarking</h3>
             <p class="card-text">2DIO is a configurable I/O trace generator capable of producing cache-accurate workloads with tunable performance cliffs and plateaus.</p>
             <div class="row ml-1 mr-1 p-0"></div>
           </div>
@@ -218,7 +183,7 @@
       <div class="row g-0">
 <div class="col-md-12">
 <div class="card-body">
-            <h3 class="card-title text-lowercase">A library for cache simulation</h3>
+            <h3 class="card-title">A library for cache simulation</h3>
             <p class="card-text">This package implements a novel algorithm for the LRU cache eviction policy using a fixed-size array.</p>
             <div class="row ml-1 mr-1 p-0"></div>
           </div>
@@ -232,8 +197,43 @@
       <div class="row g-0">
 <div class="col-md-12">
 <div class="card-body">
-            <h3 class="card-title text-lowercase">Generating high-fidelity I/O traces with GAN</h3>
+            <h3 class="card-title">Generating high-fidelity I/O traces with GAN</h3>
             <p class="card-text">Reproduction of LSTM-based GAN synthetic I/O generation proposed by Zhang et al. (2024).</p>
+            <div class="row ml-1 mr-1 p-0"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </a>
+</div>
+
+    </div>
+  </div>
+  <h2 class="category">distributed systems</h2>
+  <!-- Generate cards for each project -->
+  <div class="container">
+    <div class="row row-cols-1">
+<div class="card-item col">
+<a href="/projects/3_project/"><div class="card hoverable">
+      <div class="row g-0">
+<div class="col-md-12">
+<div class="card-body">
+            <h3 class="card-title">QoS, Fairness and Isolation in One Formula</h3>
+            <p class="card-text">A unified linear programming formula for optimal per-VM IOPS allocation under QoS and device constraints.</p>
+            <div class="row ml-1 mr-1 p-0"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </a>
+</div>
+<div class="card-item col">
+<a href="/projects/4_project/"><div class="card hoverable">
+      <div class="row g-0">
+<div class="col-md-12">
+<div class="card-body">
+            <h3 class="card-title">A Distributed Object Store built on Conventional File System</h3>
+            <p class="card-text">This is an emulation of a distributed store system built on Zoned Namespace SSDs. The system guarantees strong consistency and fault tolerant.</p>
             <div class="row ml-1 mr-1 p-0"></div>
           </div>
         </div>

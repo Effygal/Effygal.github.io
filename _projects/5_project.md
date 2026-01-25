@@ -3,7 +3,7 @@ layout: page
 title: "A library for cache simulation"
 description: "This package implements a novel algorithm for the LRU cache eviction policy using a fixed-size array."
 importance: 1
-category: open-source
+category: microbenchmarks
 related_publications: 
 ---
 

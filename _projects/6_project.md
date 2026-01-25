@@ -3,7 +3,7 @@ layout: page
 title: "Generating high-fidelity I/O traces with GAN"
 description: "Reproduction of LSTM-based GAN synthetic I/O generation proposed by Zhang et al. (2024)."
 importance: 1
-category: open-source
+category: microbenchmarks
 related_publications:
 ---
 
