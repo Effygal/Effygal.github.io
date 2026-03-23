@@ -1,6 +1,6 @@
 ---
 layout: page
-title: "Mean-field Analysis of the Randomized SIEVE/CLOCK Cache Replacement Algorithm (SIGMETRICS'26)"
+title: "Performance Analysis of the Randomized SIEVE/CLOCK Cache Replacement Algorithm (SIGMETRICS'26)"
 description: We introduce a randomized version of the SIEVE/CLOCK algorithm that uses ⌈log2(K+1)⌉ ≥ 1 access bits per cached item, and present a heterogeneous mean-field approximation of its performance." 
 importance: 2
 category: analytical modeling 
