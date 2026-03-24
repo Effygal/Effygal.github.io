@@ -1,14 +1,13 @@
 ---
 layout: page
 title: "TTL Approximations for a Family of CLOCK-Like Cache Replacement Policies"
-description: We extend TTL approximations to a family of CLOCK-like cache policies and adapt van den Berg and Towsley’s Schur-convexity proof for the FIFO miss ratio, establishing Schur-concavity results for CLOCK. This helps explain why FIFO outperforms RANDOM on real workloads and why CLOCK often outperforms LRU." 
+description: We extend TTL approximations to a family of CLOCK-like cache policies termed CLOCK($K$) and establish several structural properties, including the Schur-concavity of its miss ratio in the popularity vector and convergence of CLOCK($K$) to its randomized counterpart Ran-CLOCK($K$) as $K$ tends to infinity." 
 importance: 1
 category: analytical modeling 
 related_publications: 
 ---
 
 ## Abstract
-The performance of non-LRU or LFU caches is affected by both frequency and recency, but while prior work on replacement policies has treated these factors intuitively, analytic models have not delved deeply into their separate roles. We present a framework to isolate
-the effects of each dimension, allowing explicit derivation of miss ratio formulas as frequency and recency are varied, and validate our
-models in simulation, with mean absolute error for FIFO and CLOCK of < 0.3\% for synthetic workloads and < 2.3\% for production block storage traces.
-Our main theorem shows that the CLOCK miss ratio function is Schur-concave in the frequency vector; for fixed recency distribution, miss ratio decreases with increasing frequency skew. Real workloads are not purely IRM, yet contain significant frequency skew; we extend van den Berg and Toswley’s proof of the Schur-convexity of FIFO miss ratio to explain why FIFO out-performs RANDOM on real workloads, while using our proofs to explain why CLOCK often out-performs LRU.
+We study a family of CLOCK-like policies, termed CLOCK($K$), which recovers FIFO at $K=0$ and classical second-chance CLOCK at $K=1$. Through a TTL-based approximation, we derive miss-ratio predictions for CLOCK($K$) across cache sizes under both Markovian and general renewal traffic. We validate these predictions using synthetic workloads and production traces, showing that the \emph{renewal traffic} model defined over coarse object classes, rather than per-object renewal processes, are sufficient to accurately capture CLOCK($K$) behavior beyond the memoryless regime. 
+
+Our analysis further establishes structural properties of the approximation, including Schur-concavity of the miss probability in the popularity vector and convergence of CLOCK($K$) to its randomized counterpart Ran-CLOCK($K$) as $K$ grows large.

@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-Good news: paper "Performance Analysis of the Randomized SIEVE/CLOCK cache replacement algorithm" has been accepted to ACM Sigmetrics 2026 🎉🎉🎉
+Good news: [Ran-CLOCK]({% link _projects/7_project.md %}) has been accepted to Sigmetrics 2026 🎉🎉🎉
