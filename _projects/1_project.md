@@ -1,7 +1,7 @@
 ---
 layout: page
 title: "TTL Approximations for a Family of CLOCK-Like Cache Replacement Policies"
-description: "We extend TTL approximations to a family of CLOCK-like cache policies termed CLOCK($K$) and establish several structural properties: 1) CLOCK($K$) miss ratio is Schur-concave over frequency; b) the mean-field limit of CLOCK($K$) converges to its randomized counterpart Ran-CLOCK($K$) as $K$ tends to infinity." 
+description: "We extend TTL approximations to a family of CLOCK-like cache policies termed CLOCK(K) and establish several structural properties: a) CLOCK(K) miss ratio is Schur-concave over frequency; b) the mean-field limit of CLOCK(K) converges to its randomized counterpart Ran-CLOCK(K) as K tends to infinity." 
 importance: 1
 category: analytical modeling 
 related_publications: 
