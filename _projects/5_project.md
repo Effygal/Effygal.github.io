@@ -1,7 +1,7 @@
 ---
 layout: page
 title: "A library for cache simulation"
-description: "This package implements a novel algorithm for the LRU cache eviction policy using a fixed-size array."
+description: "High-performance cache simulators including several Sigmetrics' algorithms and a new array-based LRU algorithm."
 importance: 1
 category: microbenchmarks
 related_publications: 
