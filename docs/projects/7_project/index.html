@@ -122,16 +122,15 @@
 
           <article>
             <h2 id="abstract">Abstract</h2>
-<p>CLOCK and SIEVE are among the most widely deployed cache replacement policies. They are cheap to implement, requiring only a small amount of per-object state. Unfortunately, they are susceptible to performance pathologies such as \emph{performance cliffs}, wherein increasing cache capacity has little effect over a range of sizes until a workload-dependent threshold is crossed, after which hit rate improves abruptly and disproportionately.</p>
+<p>CLOCK and SIEVE are among the most widely deployed cache replacement policies in production, mainly prized for their simplicity and frugality. Unfortunately, they are susceptible to pathologies such as \emph{performance cliffs}, wherein increasing cache capacity has little effect over a range of sizes until a workload-dependent threshold is crossed, after which hit rate improves abruptly and disproportionately.</p>
 
-<p>Performance cliffs arise because scan-based eviction paths create a synchronized, deterministic aging frontier in which many objects are admitted and removed in lockstep, causing catastrophic performance degradation under scan-like workloads.
-This observation motivates a design principle for cache replacement: \emph{randomize the eviction path to mitigate worst-case scans while keeping the per-object state minimal}. 
-Intuitively, randomization can mitigate this effect by dispersing eviction pressure across objects; from a queueing-theoretic perspective, this dispersion is akin to a per-object birth-death process.</p>
+<p>Performance cliffs arise precisely because scan-based eviction paths create a synchronized, deterministic aging frontier in which many objects are admitted and removed in lockstep, causing catastrophic performance degradation under scan-like workloads.
+This observation motivates a design principle for cache replacement: \emph{randomize the eviction path to mitigate worst-case scans while keeping the per-object state minimal}.<br>
+Intuitively, randomization mitigates performance cliffs by dispersing eviction pressure across objects; from a queueing-theoretic perspective, this dispersion is akin to a per-object birth-death process.</p>
 
-<p>To this end, we introduce a randomized version of the SIEVE/CLOCK algorithm using $\lceil \log_2 (K+1) \rceil \geq 1$ access bits per cached item, and present a heterogeneous mean-field model to assess their performance. The accuracy of the model is demonstrated using simulations. 
-Theoretical support for the observed accuracy is presented by arguing that the mean-field model of a slightly modified version of the algorithm is $O(1/n)$ accurate, where $n$ is the population size.</p>
+<p>We thus introduce a randomized SIEVE/CLOCK variant that uses $\lceil \log_2 (K+1) \rceil \geq 1$ access bits per cached item, which is as cheap to implement as CLOCK, yet robust to scans and amenable to a natural CTMC description, enabling accurate performance analysis via a heterogeneous mean-field model.</p>
 
-<p>We compare the performance of the randomized SIEVE/CLOCK algorithm with other cache replacement algorithms to demonstrate improved hit rates (by a factor $1.5$ or more) on production workloads with long scan sequences. Furthermore, though the cache hit rate improves with the number of access bits, we show that the majority of the gain is already achieved with as few as $4$ access bits per cached item.</p>
+<p>Compared with other cache replacement algorithms, we found the randomized SIEVE/CLOCK achieves hit rates $1.5\times$ higher or more on production workloads with long scan sequences. Furthermore, though the cache hit rate improves with the number of access bits, we show that the majority of the gain is already achieved with as few as $4$ access bits per cached item.</p>
 
           </article>
 
