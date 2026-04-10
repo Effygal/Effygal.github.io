@@ -8,7 +8,7 @@ related_publications:
 ---
 
 ## Abstract
-SIEVE and CLOCK are among the most widely deployed cache replacement policies in production due to their simplicity in implementation and, in the case of CLOCK, frugality in memory usage. Unfortunately, they are susceptible to pathologies such as \emph{performance cliffs}, wherein increasing cache capacity has little effect over a range of sizes until a workload-dependent threshold is crossed, after which hit rate improves abruptly and disproportionately. 
+SIEVE and CLOCK have attracted significant interest as cache replacement algorithms due to their simplicity in implementation and, in the case of CLOCK, frugality in memory usage. Unfortunately, they are susceptible to pathologies such as \emph{performance cliffs}, wherein increasing cache capacity has little effect over a range of sizes until a workload-dependent threshold is crossed, after which hit rate improves abruptly and disproportionately. 
 
 Performance cliffs arise precisely because scan-based eviction paths create a synchronized, deterministic aging frontier in which many objects are admitted and removed in lockstep, causing catastrophic performance degradation under scan-like workloads.
 This observation motivates a design principle for cache replacement: \emph{randomize the eviction path to mitigate worst-case scans while keeping the per-object state minimal}.  
