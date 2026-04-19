@@ -721,6 +721,49 @@ footer.sticky-bottom {
   }
 }
 
+.publications.selected-publications {
+  h2.bibliography {
+    display: none;
+  }
+
+  ol.bibliography {
+    margin-top: 0.75rem;
+
+    li {
+      margin-bottom: 1.25rem;
+
+      .abbr {
+        display: none;
+      }
+
+      .row > .col-sm-8 {
+        flex: 0 0 100%;
+        max-width: 100%;
+      }
+
+      .periodical {
+        margin-bottom: 0.15rem;
+      }
+
+      .periodical + .periodical {
+        display: inline;
+      }
+
+      .links {
+        display: inline-block;
+        margin-left: 0.5rem;
+        vertical-align: text-bottom;
+
+        a.btn {
+          margin-bottom: 0;
+          padding: 0.15rem 0.75rem;
+          text-transform: none;
+        }
+      }
+    }
+  }
+}
+
 // Rouge Color Customization
 figure.highlight {
   margin: 0 0 1rem;
