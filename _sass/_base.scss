@@ -730,7 +730,8 @@ footer.sticky-bottom {
     margin-top: 0.75rem;
 
     li {
-      margin-bottom: 1.25rem;
+      line-height: 1.45;
+      margin-bottom: 0.9rem;
 
       .abbr {
         display: none;
@@ -741,24 +742,50 @@ footer.sticky-bottom {
         max-width: 100%;
       }
 
+      .title,
+      .author,
       .periodical {
-        margin-bottom: 0.15rem;
+        display: inline;
+        margin: 0;
       }
 
-      .periodical + .periodical {
-        display: inline;
+      .title {
+        font-weight: normal;
+      }
+
+      .title::after,
+      .author::after,
+      .periodical::after {
+        content: ". ";
       }
 
       .links {
-        display: inline-block;
-        margin-left: 0.5rem;
-        vertical-align: text-bottom;
+        display: inline;
+        margin-left: 0;
+        vertical-align: baseline;
 
         a.btn {
+          background: transparent;
+          border: 0;
+          box-shadow: none;
+          color: var(--global-theme-color);
+          display: inline;
+          font-size: inherit;
+          line-height: inherit;
           margin-bottom: 0;
-          padding: 0.15rem 0.75rem;
+          padding: 0;
           text-transform: none;
+
+          &:hover {
+            border: 0;
+            color: var(--global-hover-color);
+            text-decoration: underline;
+          }
         }
+      }
+
+      .badges {
+        display: none;
       }
     }
   }
