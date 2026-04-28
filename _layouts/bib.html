@@ -1,6 +1,10 @@
 ---
 ---
 <!-- _layouts/bib.html -->
+      {%- assign selected_publication_home = false -%}
+      {%- if page.url == "/" and entry.selected -%}
+        {%- assign selected_publication_home = true -%}
+      {%- endif -%}
       <div class="row">
         <div class="col-sm-2 {% if entry.preview %}preview{% else %}abbr{% endif %}">
         {%- if entry.preview -%}
@@ -32,6 +36,7 @@
         <!-- Title -->
         <div class="title">{{entry.title}}</div>
         <!-- Author -->
+        {%- unless selected_publication_home -%}
         <div class="author">
         {% assign author_array_size = entry.author_array | size %}
 
@@ -106,14 +111,26 @@
         {%- endif -%}
 
         </div>
+        {%- endunless -%}
 
         <!-- Journal/Book title and date -->
         {% assign proceedings = "inproceedings,incollection" | split: ','%}
         {% assign thesis = "thesis,mastersthesis,phdthesis" | split: ','%}
-        {% if entry.type == "article" -%}
-          {%- capture entrytype -%}<em>{{entry.journal}}</em>{%- endcapture -%}
+        {%- capture booktitle -%}{{entry.booktitle}}{%- endcapture -%}
+        {%- capture journal -%}{{entry.journal}}{%- endcapture -%}
+        {%- if entry.key == "wang2026randomizedsieveclock" -%}
+          {%- capture journal -%}<a href="https://www.sigmetrics.org/sigmetrics2026/" target="_blank" rel="noopener noreferrer">SIGMETRICS 2026</a>{%- endcapture -%}
+        {%- elsif entry.key == "wang2026twodio" -%}
+          {%- capture booktitle -%}<a href="https://2026.eurosys.org/" target="_blank" rel="noopener noreferrer">EuroSys '26</a>{%- endcapture -%}
+        {%- endif -%}
+        {% if selected_publication_home and entry.type == "article" -%}
+          {%- capture entrytype -%}<em>{{journal}}</em>{%- endcapture -%}
+        {%- elsif selected_publication_home and proceedings contains entry.type -%}
+          {%- capture entrytype -%}<em>{{booktitle}}</em>{%- endcapture -%}
+        {%- elsif entry.type == "article" -%}
+          {%- capture entrytype -%}<em>{{journal}}</em>{%- endcapture -%}
         {%- elsif proceedings contains entry.type -%}
-          {%- capture entrytype -%}<em>In {{entry.booktitle}}</em> {%- endcapture -%}
+          {%- capture entrytype -%}<em>In {{booktitle}}</em> {%- endcapture -%}
         {%- elsif thesis contains entry.type -%}
           {%- capture entrytype -%}<em>{{entry.school}}</em> {%- endcapture -%}
         {%- else -%}
@@ -126,13 +143,19 @@
           {%- capture entryyear -%}{{ " " }}{{entry.year}}{%- endcapture -%}
         {%- endif -%}
         {% assign entrytype_text = entrytype | strip_html | strip %}
-        {%- capture periodical -%}{{ entrytype }}{%- if entrytype_text != "" and entryyear != "" -%}, {%- endif -%}{{ entrymonth }}{{ entryyear }}{%- endcapture -%}
+        {%- if selected_publication_home -%}
+          {%- capture periodical -%}{{ entrytype }}{%- endcapture -%}
+        {%- else -%}
+          {%- capture periodical -%}{{ entrytype }}{%- if entrytype_text != "" and entryyear != "" -%}, {%- endif -%}{{ entrymonth }}{{ entryyear }}{%- endcapture -%}
+        {%- endif -%}
         <div class="periodical">
           {{ periodical | strip }}
         </div>
+        {%- unless selected_publication_home -%}
         <div class="periodical">
           {{ entry.note | strip }}
         </div>
+        {%- endunless -%}
 
           <!-- Links/Buttons -->
           <div class="links">
@@ -157,9 +180,9 @@
           {%- endif %}
           {%- if entry.pdf %}
             {% if entry.pdf contains '://' -%}
-            <a href="{{ entry.pdf }}" class="btn btn-sm z-depth-0" role="button">PDF</a>
+            <a href="{{ entry.pdf }}" class="btn btn-sm z-depth-0" role="button">pdf</a>
             {%- else -%}
-            <a href="{{ entry.pdf | prepend: '/assets/pdf/' | relative_url }}" class="btn btn-sm z-depth-0" role="button">PDF</a>
+            <a href="{{ entry.pdf | prepend: '/assets/pdf/' | relative_url }}" class="btn btn-sm z-depth-0" role="button">pdf</a>
             {%- endif %}
           {%- endif %}
           {%- if entry.supp %}

@@ -1,13 +1,13 @@
 ---
 layout: page
 title: "TTL Approximations for a Family of CLOCK-Like Cache Replacement Policies"
-description: "We extend TTL approximations to a family of CLOCK-like cache policies termed CLOCK(K) and establish several structural properties: a) CLOCK(K) miss ratio is Schur-concave over frequency; b) the mean-field limit of CLOCK(K) converges to its randomized counterpart Ran-CLOCK(K) as K tends to infinity." 
+description: "We extend TTL-approximations to a family of CLOCK-like cache policies termed CLOCK(K), deriving a tractable matrix-analytic solution for steady-state miss ratios under phase-type renewal processes and establishing a Schur-concavity property of CLOCK(K=0)/FIFO." 
 importance: 1
 category: analytical modeling 
 related_publications: 
 ---
 
 ## Abstract
-We study a family of CLOCK-like policies, termed CLOCK($K$), which recovers FIFO at $K=0$ and classical second-chance CLOCK at $K=1$. Through a TTL-based approximation, we derive miss-ratio predictions for CLOCK($K$) across cache sizes under both Markovian and general renewal traffic. We validate these predictions using synthetic workloads and production traces, showing that the \emph{renewal traffic} model defined over coarse object classes, rather than per-object renewal processes, are sufficient to accurately capture CLOCK($K$) behavior beyond the memoryless regime. 
+Analytical miss-ratio modeling for CLOCK-like policies remains difficult, as the scan-based eviction path inherently couples object states and obscures the steady-state structure.
 
-Our analysis further establishes structural properties of CLOCK($K$), including Schur-concavity of its miss probability in the popularity vector and convergence of CLOCK($K$) to its randomized counterpart Ran-CLOCK($K$) as $K$ grows large.
+This work addresses this gap by analyzing a family of eviction policies, termed CLOCK($K$)~\cite{ran-clock} in which FIFO corresponds to $K=0$, the canonical CLOCK~\cite{corbato_paging_1968} corresponds to $K=1$. Concretely, we derive a time-to-live (TTL) approximation that decouples individual object dynamics using a global fixed timer. While this global TTL acts as a proxy for the physical cache capacity constraint, the resulting framework yields a tractable matrix-analytic solution for steady-state miss ratios under phase-type renewal processes, effectively reducing the problem to solving a per-object linear system of order $O(Kd)$, where $d$ is the phase dimension. The accuracy of the model is validated against trace-driven simulations. We further establish a Schur-concavity property of CLOCK($K=0$)/FIFO under this TTL-approximation, along with a necessary correction to a classical theorem of FIFO Schur-convexity in {% cite van1993properties %}.

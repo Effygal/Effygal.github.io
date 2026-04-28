@@ -706,7 +706,6 @@ footer.sticky-bottom {
   max-width: 100%;
 }
 .publications.selected-publications ol.bibliography li .title,
-.publications.selected-publications ol.bibliography li .author,
 .publications.selected-publications ol.bibliography li .periodical {
   display: inline;
   margin: 0;
@@ -715,7 +714,6 @@ footer.sticky-bottom {
   font-weight: normal;
 }
 .publications.selected-publications ol.bibliography li .title::after,
-.publications.selected-publications ol.bibliography li .author::after,
 .publications.selected-publications ol.bibliography li .periodical::after {
   content: ". ";
 }
@@ -734,7 +732,7 @@ footer.sticky-bottom {
   line-height: inherit;
   margin-bottom: 0;
   padding: 0;
-  text-transform: none;
+  text-transform: lowercase;
 }
 .publications.selected-publications ol.bibliography li .links a.btn:hover {
   border: 0;

@@ -743,7 +743,6 @@ footer.sticky-bottom {
       }
 
       .title,
-      .author,
       .periodical {
         display: inline;
         margin: 0;
@@ -754,7 +753,6 @@ footer.sticky-bottom {
       }
 
       .title::after,
-      .author::after,
       .periodical::after {
         content: ". ";
       }
@@ -774,7 +772,7 @@ footer.sticky-bottom {
           line-height: inherit;
           margin-bottom: 0;
           padding: 0;
-          text-transform: none;
+          text-transform: lowercase;
 
           &:hover {
             border: 0;
