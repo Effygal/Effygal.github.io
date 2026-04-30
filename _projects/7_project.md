@@ -18,4 +18,4 @@ We thus introduce a randomized SIEVE/CLOCK variant that uses $\lceil \log_2 (K+1
 
 Compared with popular baselines and their generalizations, the randomized SIEVE/CLOCK achieves hit rates of $1.5\times$ or more on production workloads with long scan sequences. Furthermore, though the cache hit rate improves with the number of access bits, we show that the majority of the gain is already achieved with as few as $4$ access bits per cached item.
 
-[PDF]({% link assets/pdf/Ran-Clock.pdf %}).
+[pdf]({% link assets/pdf/Ran-CLOCK.pdf %}).
