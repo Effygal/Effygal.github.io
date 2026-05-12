@@ -10,7 +10,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Performance Analysis of the Randomized SIEVE/CLOCK Cache Replacement Algorithm (SIGMETRICS'26) | Yirong Effy Wang</title>
+    <title>Caching Under Uncertainty: Randomized CLOCK/SIEVE replacement | Yirong Effy Wang</title>
     <meta name="author" content="Yirong Effy Wang">
     <meta name="description" content="We introduce a randomized, scan-resistant variant of SIEVE/CLOCK that uses a single circular array and only ⌈log2(K+1)⌉ ≥ 1 access bits per cached item. We also present a heterogeneous mean-field approximation of its performance.">
     <meta name="keywords" content="Computer Systems, Distributed Storage, Cache Modelling">
@@ -116,7 +116,7 @@
         <div class="post">
 
           <header class="post-header">
-            <h1 class="post-title">Performance Analysis of the Randomized SIEVE/CLOCK Cache Replacement Algorithm (SIGMETRICS'26)</h1>
+            <h1 class="post-title">Caching Under Uncertainty: Randomized CLOCK/SIEVE replacement</h1>
             <p class="post-description">We introduce a randomized, scan-resistant variant of SIEVE/CLOCK that uses a single circular array and only ⌈log2(K+1)⌉ ≥ 1 access bits per cached item. We also present a heterogeneous mean-field approximation of its performance.</p>
           </header>
 
@@ -132,7 +132,6 @@ Intuitively, randomization mitigates performance cliffs by dispersing eviction p
 
 <p>Compared with popular baselines and their generalizations, the randomized SIEVE/CLOCK achieves hit rates of $1.5\times$ or more on production workloads with long scan sequences. Furthermore, though the cache hit rate improves with the number of access bits, we show that the majority of the gain is already achieved with as few as $4$ access bits per cached item.</p>
 
-<p><a href="/assets/pdf/Ran-CLOCK.pdf">pdf</a>.</p>
 
           </article>
 
