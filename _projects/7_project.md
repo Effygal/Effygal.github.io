@@ -1,6 +1,6 @@
 ---
 layout: page
-title: "Caching Under Uncertainty: Randomized CLOCK/SIEVE replacement"
+title: "Caching Under Uncertainty: Randomized CLOCK/SIEVE Replacement"
 description: "We introduce a randomized, scan-resistant variant of SIEVE/CLOCK that uses a single circular array and only ⌈log2(K+1)⌉ ≥ 1 access bits per cached item. We also present a heterogeneous mean-field approximation of its performance." 
 importance: 2
 category: analytical modeling 
