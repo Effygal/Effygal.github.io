@@ -1,6 +1,6 @@
 ---
 layout: page
-title: "A TTL-Based Analysis of Counter-Driven Circular Cache Replacement"
+title: "TTL Approximations for the CLOCK(K) Cache Replacement"
 description: "We extend TTL approximations to a family of CLOCK-like cache policies termed CLOCK(K), deriving a tractable matrix-analytic solution for steady-state miss ratios under phase-type renewal processes." 
 importance: 1
 category: analytical modeling 
