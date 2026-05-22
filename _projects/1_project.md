@@ -1,7 +1,7 @@
 ---
 layout: page
 title: "TTL Approximations for CLOCK(K) Cache Replacement"
-description: "We extend TTL approximations to a family of CLOCK-like cache policies termed CLOCK(K), deriving a tractable matrix-analytic solution for steady-state miss ratios under phase-type renewal processes." 
+description: "We extend TTL approximations to CLOCK(K), deriving a tractable matrix-analytic model for its steady-state performance under phase-type renewal traffic." 
 importance: 1
 category: analytical modeling 
 related_publications: 
