@@ -1,6 +1,6 @@
 ---
 layout: page
-title: "Caching Under Uncertainty with Randomized CLOCK/SIEVE Replacement"
+title: "Caching Under Uncertainty with Randomized CLOCK/SIEVE Replacement (SIGMETRICS 26)"
 description: "We introduce a randomized, scan-resistant CLOCK/SIEVE variant using a single circular array and only ⌈log2(K+1)⌉ ≥ 1 access bits per cached item, and derive a heterogeneous mean-field approximation for its performance." 
 importance: 2
 category: analytical modeling 
@@ -18,4 +18,4 @@ We thus introduce a randomized SIEVE/CLOCK variant that uses $\lceil \log_2 (K+1
 
 Compared with popular baselines and their generalizations, the randomized SIEVE/CLOCK achieves hit rates of $1.5\times$ or more on production workloads with long scan sequences. Furthermore, though the cache hit rate improves with the number of access bits, we show that the majority of the gain is already achieved with as few as $4$ access bits per cached item.
 
-
+Paper [pdf](https://dl.acm.org/doi/pdf/10.1145/3805647).
