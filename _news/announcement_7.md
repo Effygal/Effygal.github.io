@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-I’m interning at Google San Jose this summer on the TAO/efficiency-league team.
+I’m interning at Google San Jose this summer with the efficiency-league team, working on [TCMalloc](https://github.com/google/tcmalloc).
