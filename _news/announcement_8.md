@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-I’ll be presenting at SIGMETRICS 2026 on June 9 and looking forward to connecting with the performance community.
+I’ll be presenting at [SIGMETRICS 2026](https://www.sigmetrics.org/sigmetrics2026/) on June 9 and looking forward to connecting with the performance community.

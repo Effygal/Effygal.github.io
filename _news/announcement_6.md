@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-Good news: [Ran-CLOCK]({% link _projects/7_project.md %}) has been accepted to Sigmetrics 2026 🎉🎉🎉
+Good news: [Ran-CLOCK]({% link _projects/7_project.md %}) has been accepted to SIGMETRICS 2026 🎉🎉🎉

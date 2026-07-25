@@ -1,14 +1,14 @@
 ---
 layout: page
 title: "A library for cache simulation"
-description: "High-performance cache simulators including several Sigmetrics' algorithms and a new array-based LRU algorithm."
+description: "High-performance cache simulators including several families of algorithms from SIGMETRICS and a new array-based LRU implementation."
 importance: 1
 category: microbenchmarks
 related_publications: 
 ---
 
 ## Abstract
-We introduce an array-based LRU algorithm; it is particularly suitable for scenarios where memory constraints prevent the use of linked lists. 
+We introduce an array-based LRU implementation; it is particularly suitable for scenarios where memory constraints prevent the use of linked lists. 
 ```cpp
 /*
   +-+-+-+-+-+-+-+-+-+-+-+-+-+
